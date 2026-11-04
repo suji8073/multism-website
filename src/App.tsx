@@ -1,10 +1,21 @@
+import { Toaster } from '@/components/atoms/sonner'
+import { Footer } from '@/components/layout/footer'
+import { Header } from '@/components/layout/header'
+import { MobileBottomBar } from '@/components/layout/mobile-bottom-bar'
+import { UtilityBar } from '@/components/layout/utility-bar'
+
 function App() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neutral-950 text-white">
-      <p className="text-sm tracking-[0.3em] text-neutral-400">ONE-STOP EVENT SERVICE</p>
-      <h1 className="text-4xl font-bold md:text-6xl">멀티SM산업</h1>
-      <p className="text-lg text-neutral-300">“A부터 Z까지, 모든 과정을 직접.”</p>
-    </main>
+    <>
+      <UtilityBar />
+      <Header />
+      <main id="top" className="text-muted-foreground flex min-h-[60vh] items-center justify-center text-sm">
+        섹션은 다음 단계에서 구현합니다
+      </main>
+      <Footer />
+      <MobileBottomBar />
+      <Toaster />
+    </>
   )
 }
 
