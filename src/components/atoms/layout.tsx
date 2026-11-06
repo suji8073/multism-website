@@ -99,9 +99,9 @@ function Reveal({ index = 0, className, children }: { index?: number; className?
     <BlurFade
       inView
       direction="up"
-      offset={24}
-      duration={0.6}
-      delay={0.08 * (index % 8)}
+      offset={20}
+      duration={0.45}
+      delay={0.06 * (index % 8)}
       className={cn('h-full', className)}
     >
       {children}

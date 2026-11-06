@@ -40,7 +40,8 @@ export function BlurFade({
   offset = 6,
   direction = "down",
   inView = false,
-  inViewMargin = "-50px",
+  // 위쪽은 아주 넓게: 빠르게 스크롤해 이미 지나간 요소도 즉시 보이게 (투명한 채로 남는 버그 방지)
+  inViewMargin = "100000px 0px -40px 0px",
   blur = "6px",
   ...props
 }: BlurFadeProps) {
