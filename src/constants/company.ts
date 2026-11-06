@@ -18,8 +18,9 @@ export const COMPANY = {
 export const NAV_ITEMS = [
   { label: '회사소개', href: '#why' },
   { label: '사업영역', href: '#business' },
-  { label: '진행과정', href: '#process' },
+  { label: '장비렌탈', href: '#rental' },
   { label: '행사실적', href: '#portfolio' },
+  { label: '프로그램', href: '#programs' },
   { label: '고객문의', href: '#contact' },
 ] as const
 

@@ -2,15 +2,30 @@ import { Toaster } from '@/components/atoms/sonner'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { MobileBottomBar } from '@/components/layout/mobile-bottom-bar'
-import { UtilityBar } from '@/components/layout/utility-bar'
+import { BusinessSection } from '@/components/sections/business-section'
+import { ClientsSection, ContactSection } from '@/components/sections/contact-section'
+import { HeroSection } from '@/components/sections/hero-section'
+import { ProgramsSection } from '@/components/sections/programs-section'
+import { PortfolioSection } from '@/components/sections/portfolio-section'
+import { ProcessSection } from '@/components/sections/process-section'
+import { WhySection } from '@/components/sections/why-section'
+import { FaqSection, GreetingSection } from '@/components/sections/about-section'
 
 function App() {
   return (
     <>
-      <UtilityBar />
       <Header />
-      <main id="top" className="text-muted-foreground flex min-h-[60vh] items-center justify-center text-sm">
-        섹션은 다음 단계에서 구현합니다
+      <main>
+        <HeroSection />
+        <WhySection />
+        <BusinessSection />
+        <ProcessSection />
+        <PortfolioSection />
+        <ProgramsSection />
+        <GreetingSection />
+        <FaqSection />
+        <ClientsSection />
+        <ContactSection />
       </main>
       <Footer />
       <MobileBottomBar />
