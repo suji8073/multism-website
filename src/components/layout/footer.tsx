@@ -4,7 +4,7 @@ import { COMPANY } from '@/constants/company'
 
 function Footer() {
   return (
-    <footer className="bg-[#0A1D3B] text-[13px] leading-loose text-[#A9B5C7]">
+    <footer className="bg-[#0A1D3B] text-caption leading-loose text-[#A9B5C7]">
       <Container className="flex flex-wrap justify-between gap-6 pt-9 pb-24 md:pb-12">
         <div>
           <span className="mb-2 flex items-center gap-2">

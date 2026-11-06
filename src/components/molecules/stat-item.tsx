@@ -1,18 +1,31 @@
+import { NumberTicker } from '@/components/atoms/number-ticker'
 import { cn } from '@/lib/utils'
 
 type StatItemProps = {
-  value: string
+  /** 숫자면 카운트업 애니메이션 */
+  value: number | string
+  /** 숫자 뒤에 붙는 단위 (예: 건+, 년) */
+  suffix?: string
   label: string
-  /** 왼쪽 구분선 표시 (첫 항목 제외) */
   divider?: boolean
+  inverse?: boolean
   className?: string
 }
 
-function StatItem({ value, label, divider = false, className }: StatItemProps) {
+function StatItem({ value, suffix, label, divider = false, inverse, className }: StatItemProps) {
   return (
-    <div className={cn('flex flex-col gap-1.5', divider && 'sm:border-l sm:pl-6', className)}>
-      <span className="text-primary text-[32px] leading-tight font-bold">{value}</span>
-      <span className="text-muted-foreground text-sm">{label}</span>
+    <div
+      className={cn('flex flex-col gap-1.5', divider && 'lg:border-l lg:pl-6', inverse && 'border-white/20', className)}
+    >
+      <span className={cn('text-[36px] leading-tight font-bold', inverse ? 'text-white' : 'text-primary')}>
+        {typeof value === 'number' ? (
+          <NumberTicker value={value} className={cn('tracking-tight', inverse ? 'text-white' : 'text-primary')} />
+        ) : (
+          value
+        )}
+        {suffix && <span className="text-accent-strong ml-0.5 text-2xl">{suffix}</span>}
+      </span>
+      <span className={cn('text-sm', inverse ? 'text-[#C9D3E3]' : 'text-muted-foreground')}>{label}</span>
     </div>
   )
 }
