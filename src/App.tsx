@@ -9,7 +9,7 @@ import { ProgramsSection } from '@/components/sections/programs-section'
 import { PortfolioSection } from '@/components/sections/portfolio-section'
 import { ProcessSection } from '@/components/sections/process-section'
 import { WhySection } from '@/components/sections/why-section'
-import { FaqSection, GreetingSection } from '@/components/sections/about-section'
+import { FaqSection, GreetingSection, TestimonialsSection } from '@/components/sections/about-section'
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <PortfolioSection />
         <ProgramsSection />
         <GreetingSection />
+        <TestimonialsSection />
         <FaqSection />
         <ClientsSection />
         <ContactSection />

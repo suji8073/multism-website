@@ -1,4 +1,4 @@
-import { ArrowDownIcon, DownloadSimpleIcon } from '@phosphor-icons/react'
+import { ArrowDownIcon } from '@phosphor-icons/react'
 import { BlurFade } from '@/components/atoms/blur-fade'
 import { Button } from '@/components/atoms/button'
 import { Grid, Stack } from '@/components/atoms/layout'
@@ -40,13 +40,6 @@ function HeroSection() {
                 <a href="#portfolio">
                   행사 실적 보기
                   <ArrowDownIcon weight="bold" />
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="inverse">
-                {/* TODO: 회사소개서 PDF를 public/에 넣고 경로 연결 */}
-                <a href="#contact">
-                  <DownloadSimpleIcon weight="bold" />
-                  회사소개서 요청
                 </a>
               </Button>
             </Stack>

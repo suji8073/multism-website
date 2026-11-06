@@ -5,6 +5,7 @@ import { Grid, Stack } from '@/components/atoms/layout'
 import { Eyebrow, Heading, Text } from '@/components/atoms/typography'
 import { ContactCard } from '@/components/molecules/contact-card'
 import { InfoRow } from '@/components/molecules/info-row'
+import { MapActions } from '@/components/molecules/map-actions'
 import { NameMarquee } from '@/components/molecules/name-marquee'
 import { Section } from '@/components/layout/section'
 import { COMPANY, toTel } from '@/constants/company'
@@ -37,7 +38,7 @@ function ClientsSection() {
 }
 
 function ContactSection() {
-  const { ceo, manager, office } = COMPANY.phones
+  const { ceo, manager } = COMPANY.phones
   const address = COMPANY.address.split(' (')[0]
   return (
     <Section id="contact" tone="primary">
@@ -53,6 +54,7 @@ function ContactSection() {
           <InfoRow inverse icon={MapPinIcon} href={`https://map.naver.com/p/search/${encodeURIComponent(address)}`}>
             {COMPANY.address} · 왕길역 맞은편 도보 7분
           </InfoRow>
+          <MapActions inverse address={address} className="-mt-2 pl-8" />
           <Button
             variant="accent"
             size="lg"
@@ -66,8 +68,8 @@ function ContactSection() {
         <Grid cols="1-2" gap={3} reveal>
           <ContactCard label={ceo.label} value={ceo.number} href={toTel(ceo.number)} />
           <ContactCard label={manager.label} value={manager.number} href={toTel(manager.number)} />
-          <ContactCard label={office.label} value={office.number} href={toTel(office.number)} />
           <ContactCard label="이메일" value={COMPANY.email} href={`mailto:${COMPANY.email}`} />
+          <ContactCard label="네이버 블로그" value="현장 후기 보러가기" href={COMPANY.blog} external />
         </Grid>
       </Grid>
     </Section>

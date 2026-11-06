@@ -26,7 +26,7 @@ function PortfolioSection() {
         action={
           <Button asChild variant="link">
             <a href={COMPANY.blog} target="_blank" rel="noreferrer">
-              블로그에서 현장 사진 보기
+              블로그 보기
               <ArrowSquareOutIcon />
             </a>
           </Button>

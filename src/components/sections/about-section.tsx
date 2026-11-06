@@ -3,7 +3,8 @@ import { FaqList } from '@/components/molecules/faq-list'
 import { GreetingCard } from '@/components/molecules/greeting-card'
 import { SectionHeader } from '@/components/molecules/section-header'
 import { Section } from '@/components/layout/section'
-import { FAQ, GREETING } from '@/data/content'
+import { TestimonialCard } from '@/components/molecules/testimonial-card'
+import { FAQ, GREETING, TESTIMONIALS, TESTIMONIALS_ARE_SAMPLE } from '@/data/content'
 
 function GreetingSection() {
   return (
@@ -32,4 +33,27 @@ function FaqSection() {
   )
 }
 
-export { FaqSection, GreetingSection }
+/** 고객 후기 — 예시 문구인 동안은 개발 화면에서만 보임 */
+function TestimonialsSection() {
+  if (TESTIMONIALS_ARE_SAMPLE && !import.meta.env.DEV) return null
+  return (
+    <Section id="reviews">
+      <SectionHeader
+        eyebrow="REVIEWS"
+        title="다시 맡겨주시는 이유"
+        description={
+          TESTIMONIALS_ARE_SAMPLE
+            ? '※ 예시 문구입니다. 실제 후기로 교체 전까지 공개 사이트에는 보이지 않습니다.'
+            : undefined
+        }
+      />
+      <Grid cols="1-2-3" gap={6} reveal>
+        {TESTIMONIALS.map((t) => (
+          <TestimonialCard key={t.organization} {...t} />
+        ))}
+      </Grid>
+    </Section>
+  )
+}
+
+export { FaqSection, GreetingSection, TestimonialsSection }

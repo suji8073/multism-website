@@ -1,17 +1,16 @@
-/** 회사 기본 정보 — 소개서·블로그 기준. 사업자번호는 확인 후 채울 것 */
+/** 회사 기본 정보 — 소개서·블로그 기준 */
 export const COMPANY = {
   name: '멀티SM산업',
   nameEn: 'MULTI SM INDUSTRY',
   slogan: 'A부터 Z까지, 모든 과정을 직접.',
   ceo: '채희수',
-  businessNumber: '', // TODO: 사업자등록번호 확인 필요
+  businessNumber: '137-13-48631',
   address: '인천 서구 검단로326번길 47-4 (왕길동 64-51)',
   email: 'mult8089@naver.com',
   blog: 'https://blog.naver.com/mult8089',
   phones: {
     ceo: { label: '대표 채희수', number: '010-4225-9916' },
     manager: { label: '실장 이소연', number: '010-4266-8073' },
-    office: { label: '사무실', number: '032-566-8089' },
   },
 } as const
 
