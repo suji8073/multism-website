@@ -22,7 +22,7 @@ function TabsTrigger({ className, ...props }: ComponentProps<typeof TabsPrimitiv
     <TabsPrimitive.Trigger
       data-slot="tabs-trigger"
       className={cn(
-        'text-muted-foreground hover:text-foreground data-[state=active]:border-primary data-[state=active]:text-primary -mb-px h-12 cursor-pointer border-b-2 border-transparent px-4 text-[15px] font-medium transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring data-[state=active]:font-bold',
+        'text-muted-foreground hover:text-foreground data-[state=active]:border-primary data-[state=active]:text-primary -mb-px h-12 cursor-pointer border-b-2 border-transparent px-4 text-body font-medium transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring data-[state=active]:font-bold',
         className,
       )}
       {...props}

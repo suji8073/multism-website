@@ -12,7 +12,7 @@ function SelectTrigger({ className, children, ...props }: ComponentProps<typeof 
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        'border-input bg-background data-[placeholder]:text-muted-foreground flex h-11 w-full items-center justify-between gap-2 rounded-md border px-3 text-[15px] outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/15 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:truncate',
+        'border-input bg-background data-[placeholder]:text-muted-foreground flex h-11 w-full items-center justify-between gap-2 rounded-md border px-3 text-body outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/15 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:truncate',
         className,
       )}
       {...props}
@@ -54,7 +54,7 @@ function SelectItem({ className, children, ...props }: ComponentProps<typeof Sel
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        'focus:bg-primary-soft focus:text-primary relative flex w-full cursor-pointer items-center rounded-sm py-2 pr-8 pl-3 text-[15px] outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'focus:bg-primary-soft focus:text-primary relative flex w-full cursor-pointer items-center rounded-sm py-2 pr-8 pl-3 text-body outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         className,
       )}
       {...props}

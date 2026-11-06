@@ -29,18 +29,18 @@ function LogoSymbol({ tone = 'light', compact = false, className, ...props }: Lo
         strokeLinejoin="round"
       />
       {compact ? (
-        <path d="M48 14 V4 M52.2 15.8 L58.6 9.4 M43.8 15.8 L37.4 9.4" stroke="var(--accent)" strokeWidth="5" />
+        <path d="M48 14 V4 M52.2 15.8 L58.6 9.4 M43.8 15.8 L37.4 9.4" stroke="var(--logo-orange)" strokeWidth="5" />
       ) : (
         <>
           <path
             d="M48 14 V4 M52.2 15.8 L58.6 9.4 M43.8 15.8 L37.4 9.4 M54 20 H63 M42 20 H33"
-            stroke="var(--accent)"
+            stroke="var(--logo-orange)"
             strokeWidth="3.6"
           />
-          <circle cx="54.5" cy="4.3" r="2" fill="var(--spark-yellow)" />
+          <circle cx="54.5" cy="4.3" r="2" fill="var(--logo-yellow)" />
           <circle cx="41.5" cy="4.3" r="2" fill="var(--spark-sky)" />
           <circle cx="63.7" cy="12.5" r="1.8" fill="var(--spark-sky)" />
-          <circle cx="32.3" cy="12.5" r="1.8" fill="var(--spark-yellow)" />
+          <circle cx="32.3" cy="12.5" r="1.8" fill="var(--logo-yellow)" />
         </>
       )}
     </svg>

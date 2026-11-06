@@ -33,7 +33,7 @@ function CardDescription({ className, ...props }: ComponentProps<'p'>) {
   return (
     <p
       data-slot="card-description"
-      className={cn('text-subtle-foreground text-sm leading-relaxed', className)}
+      className={cn('text-subtle-foreground text-caption', className)}
       {...props}
     />
   )
