@@ -11,12 +11,12 @@ function Footer() {
             <LogoSymbol tone="dark" className="h-6" />
             <b className="pt-0.5 text-base text-white">{COMPANY.name}</b>
           </span>
-          대표 {COMPANY.ceo} · 사업자등록번호 {COMPANY.businessNumber || '[확인 필요]'}
+          대표 {COMPANY.ceo} · 사업자등록번호 {COMPANY.businessNumber}
           <br />
           {COMPANY.address}
         </div>
         <div>
-          T. {COMPANY.phones.office.number} · M. {COMPANY.phones.ceo.number} · {COMPANY.email}
+          M. {COMPANY.phones.ceo.number} · {COMPANY.phones.manager.number} · {COMPANY.email}
           <br />
           <a href={COMPANY.blog} target="_blank" rel="noreferrer" className="text-white hover:underline">
             네이버 블로그

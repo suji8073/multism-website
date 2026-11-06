@@ -1,3 +1,4 @@
+import { PhoneIcon } from '@phosphor-icons/react'
 import { useId, useState, type FormEvent } from 'react'
 import { Button } from '@/components/atoms/button'
 import { Input } from '@/components/atoms/input'
@@ -121,7 +122,10 @@ function QuickQuoteForm({ onSubmit, compact, className }: QuickQuoteFormProps) {
         block={!compact}
         className={cn(compact && 'self-center')}
       >
-        <a href={toTel(COMPANY.phones.ceo.number)}>바로 전화 상담 {COMPANY.phones.ceo.number}</a>
+        <a href={toTel(COMPANY.phones.ceo.number)}>
+          <PhoneIcon weight="fill" />
+          바로 전화 상담 {COMPANY.phones.ceo.number}
+        </a>
       </Button>
     </form>
   )

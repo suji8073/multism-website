@@ -1,3 +1,7 @@
+import { HandshakeIcon } from '@phosphor-icons/react'
+import { ValueCard } from './value-card'
+import { MapActions } from './map-actions'
+import { TestimonialCard } from './testimonial-card'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { WarehouseIcon, WrenchIcon } from '@phosphor-icons/react'
 import { CardCarousel } from './card-carousel'
@@ -118,5 +122,38 @@ export const Faq: Story = {
         },
       ]}
     />
+  ),
+}
+
+export const Testimonial: StoryObj = {
+  name: 'TestimonialCard',
+  render: () => (
+    <div className="max-w-sm">
+      <TestimonialCard
+        quote="천막 설치부터 음향, 시상식 진행까지 한 업체에서 다 해주셔서 정말 편했습니다."
+        organization="○○ 향우연합회"
+        event="한마음 체육대회"
+      />
+    </div>
+  ),
+}
+
+export const MapButtons: StoryObj = {
+  name: 'MapActions',
+  render: () => <MapActions address="인천 서구 검단로326번길 47-4 (왕길동 64-51)" />,
+}
+
+export const Value: StoryObj = {
+  name: 'ValueCard',
+  render: () => (
+    <div className="bg-muted max-w-xs p-6">
+      <ValueCard
+        no="04"
+        title="TRUST"
+        label="경험과 책임감"
+        description="현장 경험과 책임감으로 안정적인 행사를 만들어갑니다."
+        icon={HandshakeIcon}
+      />
+    </div>
   ),
 }

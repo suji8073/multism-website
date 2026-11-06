@@ -11,8 +11,8 @@ function UtilityBar() {
           <a href={toTel(COMPANY.phones.ceo.number)} className="hover:text-white">
             대표 {COMPANY.phones.ceo.number}
           </a>
-          <a href={toTel(COMPANY.phones.office.number)} className="hover:text-white">
-            사무실 {COMPANY.phones.office.number}
+          <a href={toTel(COMPANY.phones.ceo.number)} className="hover:text-white">
+            대표 {COMPANY.phones.ceo.number}
           </a>
           <a href={`mailto:${COMPANY.email}`} className="hover:text-white">
             {COMPANY.email}

@@ -17,13 +17,13 @@ function StatItem({ value, suffix, label, divider = false, inverse, className }:
     <div
       className={cn('flex flex-col gap-1.5', divider && 'lg:border-l lg:pl-6', inverse && 'border-white/20', className)}
     >
-      <span className={cn('text-[36px] leading-tight font-bold', inverse ? 'text-white' : 'text-primary')}>
+      <span className={cn('text-[36px] leading-tight font-bold', inverse ? 'text-white' : 'text-accent-strong')}>
         {typeof value === 'number' ? (
-          <NumberTicker value={value} className={cn('tracking-tight', inverse ? 'text-white' : 'text-primary')} />
+          <NumberTicker value={value} className={cn('tracking-tight', inverse ? 'text-white' : 'text-accent-strong')} />
         ) : (
           value
         )}
-        {suffix && <span className="text-accent-strong ml-0.5 text-2xl">{suffix}</span>}
+        {suffix && <span className={cn('ml-1 text-xl', inverse ? 'text-white/80' : 'text-primary')}>{suffix}</span>}
       </span>
       <span className={cn('text-sm', inverse ? 'text-[#C9D3E3]' : 'text-muted-foreground')}>{label}</span>
     </div>
