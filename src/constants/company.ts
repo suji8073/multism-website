@@ -5,7 +5,7 @@ export const COMPANY = {
   slogan: 'A부터 Z까지, 모든 과정을 직접.',
   ceo: '채희수',
   businessNumber: '137-13-48631',
-  address: '인천 서구 검단로326번길 47-4 (왕길동 64-51)',
+  address: '인천 검단구 검단로326번길 47-4 (왕길동 64-51)',
   email: 'mult8089@naver.com',
   blog: 'https://blog.naver.com/mult8089',
   phones: {

@@ -1,6 +1,6 @@
 # multism-website
 
-멀티SM산업(MULTI SM INDUSTRY) 회사 소개 웹사이트입니다. 인천 서구 검단·김포 지역에서 행사 대행과 장비 렌탈을 하는 회사입니다.
+멀티SM산업(MULTI SM INDUSTRY) 회사 소개 웹사이트입니다. 인천 검단구·김포 지역에서 행사 대행과 장비 렌탈을 하는 회사입니다.
 
 - 배포 주소: https://multism-website.vercel.app
 - 원본 자료: 회사소개서(PDF·PPTX), [네이버 블로그](https://blog.naver.com/mult8089)

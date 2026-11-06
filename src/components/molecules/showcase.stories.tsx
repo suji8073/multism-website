@@ -140,7 +140,7 @@ export const Testimonial: StoryObj = {
 
 export const MapButtons: StoryObj = {
   name: 'MapActions',
-  render: () => <MapActions address="인천 서구 검단로326번길 47-4 (왕길동 64-51)" />,
+  render: () => <MapActions address="인천 검단구 검단로326번길 47-4 (왕길동 64-51)" />,
 }
 
 export const Value: StoryObj = {
