@@ -3,6 +3,7 @@ import { BlurFade } from '@/components/atoms/blur-fade'
 import { Button } from '@/components/atoms/button'
 import { Grid, Stack } from '@/components/atoms/layout'
 import { Eyebrow, Heading, Highlight, Text } from '@/components/atoms/typography'
+import { sendQuote } from '@/lib/send-quote'
 import { QuickQuoteForm } from '@/components/molecules/quick-quote-form'
 import { StatItem } from '@/components/molecules/stat-item'
 import { FullBleedHero } from '@/components/layout/full-bleed-hero'
@@ -18,7 +19,7 @@ function HeroSection() {
         aside={
           <BlurFade delay={0.15}>
             <div id="quote" className="scroll-mt-24">
-              <QuickQuoteForm compact />
+              <QuickQuoteForm compact onSubmit={sendQuote} />
             </div>
           </BlurFade>
         }

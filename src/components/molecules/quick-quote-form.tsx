@@ -23,7 +23,7 @@ export type QuickQuoteValues = {
 }
 
 type QuickQuoteFormProps = {
-  /** 실제 전송 처리 (메일 발송 서비스 연결 예정). 없으면 토스트만 띄운다 */
+  /** 실제 전송 처리 (예: sendQuote). 실패하면 전화 안내 토스트를 띄운다 */
   onSubmit?: (values: QuickQuoteValues) => Promise<void> | void
   /** 히어로처럼 좁은 곳: 유형을 알약 버튼으로, 전화 버튼은 글자 링크로 */
   compact?: boolean
