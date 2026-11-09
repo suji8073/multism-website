@@ -56,3 +56,15 @@ public/images/             # 히어로·실적·렌탈·게임 사진
 - **행사 실적:** `ALL_PORTFOLIO`에 추가합니다. 블로그 글 주소(`href`)가 있는 실적만 화면에 보입니다.
 - **고객 후기:** 지금은 예시 문구라 개발 서버에서만 보입니다. 실제 후기로 바꾼 뒤 `TESTIMONIALS_ARE_SAMPLE`을 `false`로 바꾸면 공개됩니다.
 - **대표 인사말:** 대표님 확인 전 초안입니다. 사진은 `GREETING.image`에 경로를 넣으면 나타납니다.
+
+## 견적 요청 메일 (Web3Forms)
+
+히어로의 빠른 견적 폼은 [Web3Forms](https://web3forms.com)로 회사 메일에 바로 전송됩니다. 별도 서버나 DB는 없고, 요청 내용은 메일로만 남습니다.
+
+- **전송 코드:** `src/lib/send-quote.ts`가 `https://api.web3forms.com/submit`으로 행사 유형·단체명·연락처를 보냅니다.
+- **메일 제목:** `[홈페이지 견적 요청] 행사유형 · 단체명`
+- **접근 키:** 환경 변수 `VITE_WEB3FORMS_KEY`에 넣습니다.
+  - 로컬: `.env.local` (git에 올라가지 않음)
+  - 배포: Vercel 프로젝트 환경 변수 (Production·Preview·Development)
+- **받는 메일 바꾸기:** Web3Forms에서 새 메일로 키를 발급받아 위 두 곳의 값을 바꾸고 다시 배포합니다.
+- 전송에 실패하면 화면에 전화 상담 안내가 뜹니다. 메일이 안 오면 스팸함과 Web3Forms 대시보드를 확인하세요.
