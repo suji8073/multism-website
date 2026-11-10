@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://multism-website.vercel.app/sitemap.xml
