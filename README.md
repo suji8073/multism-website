@@ -1,9 +1,37 @@
-# multism-website
+<div align="center">
 
-멀티SM산업(MULTI SM INDUSTRY) 회사 소개 웹사이트입니다. 인천 검단구·김포 지역에서 행사 대행과 장비 렌탈을 하는 회사입니다.
+# 🎪 멀티SM산업
 
-- 배포 주소: https://multism-website.vercel.app
-- 원본 자료: 회사소개서(PDF·PPTX), [네이버 블로그](https://blog.naver.com/mult8089)
+**행사 대행·무대·천막 렌탈 회사 홈페이지**<br/>
+행사·공연 기획부터 무대·음향·천막 렌탈, 설치·철거까지 한 회사가 직접 책임집니다.
+
+<br/>
+
+<img src="public/og-image.jpg" alt="멀티SM산업 — 행사의 처음부터 끝까지, 한 회사가 책임집니다" width="100%" />
+
+<br/>
+
+[홈페이지 바로가기](https://multism-website.vercel.app) · [네이버 블로그](https://blog.naver.com/mult8089)
+
+<br/>
+
+![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Storybook](https://img.shields.io/badge/Storybook_9-FF4785?style=flat-square&logo=storybook&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+
+</div>
+
+<br/>
+
+<table>
+  <tr><td>🌐 <b>배포 주소</b></td><td><a href="https://multism-website.vercel.app">multism-website.vercel.app</a></td></tr>
+  <tr><td>📝 <b>블로그</b></td><td><a href="https://blog.naver.com/mult8089">blog.naver.com/mult8089</a> — 행사 실적 사진·후기의 출처</td></tr>
+  <tr><td>📄 <b>원본 자료</b></td><td>회사소개서 (PDF · PPTX)</td></tr>
+  <tr><td>📞 <b>문의</b></td><td>대표 010-4225-9916 · <a href="mailto:mult8089@naver.com">mult8089@naver.com</a></td></tr>
+</table>
 
 ## 기술 스택
 
@@ -68,3 +96,14 @@ public/images/             # 히어로·실적·렌탈·게임 사진
   - 배포: Vercel 프로젝트 환경 변수 (Production·Preview·Development)
 - **받는 메일 바꾸기:** Web3Forms에서 새 메일로 키를 발급받아 위 두 곳의 값을 바꾸고 다시 배포합니다.
 - 전송에 실패하면 화면에 전화 상담 안내가 뜹니다. 메일이 안 오면 스팸함과 Web3Forms 대시보드를 확인하세요.
+
+## 검색 노출 (SEO)
+
+- **`public/robots.txt`:** 검색엔진 수집을 허용하고 사이트맵 위치를 알립니다.
+- **`public/sitemap.xml`:** 메인 페이지 주소입니다. 내용을 크게 바꾸면 `lastmod` 날짜를 고칩니다.
+- **`index.html`:**
+  - 검색 결과 설명(`description`)
+  - 링크 공유 미리보기(OG·Twitter, 이미지는 `public/og-image.jpg`)
+  - 업체 정보 구조화 데이터(`LocalBusiness` JSON-LD)
+- 연락처나 주소가 바뀌면 `src/constants/company.ts`와 함께 `index.html`의 구조화 데이터, OG 이미지도 고쳐야 합니다.
+- 구글 서치 콘솔과 네이버 서치어드바이저에는 URL 접두어 방식으로 등록하고, HTML 태그로 소유권을 확인합니다.
